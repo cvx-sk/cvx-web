@@ -1,0 +1,10 @@
+/*
+!/public
+!/src
+!/tests
+!/babel.config.js
+!/tsconfig.json
+!/vue.config.js
+!/package.json
+!/package-lock.json
+!/nginx.conf
