@@ -51,6 +51,7 @@ $link-color: #42b983;
   a {
     font-weight: bold;
     color: #2c3e50;
+    white-space: nowrap;
 
     &.router-link-exact-active {
       color: #42b983;

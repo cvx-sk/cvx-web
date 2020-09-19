@@ -1,7 +1,7 @@
 <template>
     <b-card no-body id="nav-cotnaier">
         <b-nav pills card-header slot="header" v-b-scrollspy:nav-scroller>
-            <b-nav-item-dropdown text="O nás" right-alignment>
+            <b-nav-item-dropdown text="O nás" right-alignment boundary="window">
                 <b-dropdown-item href="#kto_sme" @click="scrollIntoView">Kto sme?</b-dropdown-item>
                 <b-dropdown-divider></b-dropdown-divider>
                 <b-dropdown-item href="#kto_sme_1" @click="scrollIntoView">Celosvetové spoločenstvo</b-dropdown-item>
@@ -73,10 +73,12 @@ export default class About extends Vue {
     if (hash) this.scrollIntoView(hash)
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   scrollIntoView (evt: any) {
     // evt.preventDefault()
-    const href = typeof evt === 'string' ? evt : evt ? evt.target.getAttribute('href') : null
+    const href = typeof evt === 'string' ? evt : evt?.target?.getAttribute('href')
     const el = href ? document.querySelector(href) : null
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if (el) (this.$refs.content as any).scrollTop = el.offsetTop
   }
 }
@@ -86,15 +88,22 @@ export default class About extends Vue {
 #nav-cotnaier {
     height: 100%;
     .card-header {
-        padding: 0.2rem 0.8rem;
-        .nav-link {
-            padding: 0.1rem 0.5rem;
+      padding: 0.2rem 0.8rem;
+      .nav-link {
+          padding: 0.1rem 0.5rem;
+      }
+      .nav-pills .nav-link.active,
+      .nav-pills .show > .nav-link,
+      .dropdown-item.active, .dropdown-item:active {
+          background-color: #42b983;
+      }
+      ul.dropdown-menu.show {
+        max-width: 100%;
+        a.dropdown-item {
+          width: 100%;
+          overflow-y: hidden;
         }
-        .nav-pills .nav-link.active,
-        .nav-pills .show > .nav-link,
-        .dropdown-item.active, .dropdown-item:active {
-            background-color: #42b983;
-        }
+      }
     }
     .blockquote {
         font-size: 1rem;
