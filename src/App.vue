@@ -1,5 +1,5 @@
 <template>
-  <table id="app">
+  <table id="app"> <!-- Noncompliant -->
     <tr>
     <td id="nav">
       <b-navbar variant="light" fluid class="main-navbar">

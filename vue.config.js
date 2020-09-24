@@ -1,8 +1,8 @@
 module.exports = {
-  publicPath: '/',
+    publicPath: '/',
 
-  pwa: {
-    name: 'CVX Web',
-    themeColor: '#41AC78'
-  }
-}
+    pwa: {
+        name: 'CVX Web',
+        themeColor: '#41AC78',
+    },
+};

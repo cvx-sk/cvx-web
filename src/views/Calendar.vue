@@ -3,11 +3,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component({})
 export default class About extends Vue {
-  url = 'https://calendar.google.com/calendar/embed?src=tvvjrb7ummk6c42rkv2c33br3k%40group.calendar.google.com&color=%230F4B38&ctz=Europe%2FVienna'
+    url = 'https://calendar.google.com/calendar/embed?src=tvvjrb7ummk6c42rkv2c33br3k%40group.calendar.google.com&color=%230F4B38&ctz=Europe%2FVienna';
 }
 </script>
 

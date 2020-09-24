@@ -57,29 +57,29 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator';
 // import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
 
 @Component({
-  components: {
+    components: {
     // HelloWorld
-  }
+    },
 })
 export default class About extends Vue {
   text = 'TODO';
 
-  mounted () {
-    const hash = window.location.hash
-    if (hash) this.scrollIntoView(hash)
+  mounted() {
+      const hash = window.location.hash;
+      if (hash) this.scrollIntoView(hash);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  scrollIntoView (evt: any) {
-    // evt.preventDefault()
-    const href = typeof evt === 'string' ? evt : evt?.target?.getAttribute('href')
-    const el = href ? document.querySelector(href) : null
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    if (el) (this.$refs.content as any).scrollTop = el.offsetTop
+  scrollIntoView(evt: any) {
+      // evt.preventDefault()
+      const href = typeof evt === 'string' ? evt : evt?.target?.getAttribute('href');
+      const el = href ? document.querySelector(href) : null;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (el) (this.$refs.content as any).scrollTop = el.offsetTop;
   }
 }
 </script>
