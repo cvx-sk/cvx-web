@@ -12,13 +12,13 @@
                 </b-alert>
                 <div v-if="data" class="content">
                     <h1>{{ data.title.nominative }}</h1>
-                    <h3>{{data.date.fromFormatted}} až {{data.date.toFormatted}} {{data.destination}}</h3>
+                    <h3>{{data.date.from_pretty}} až {{data.date.to_pretty}} {{data.destination.name}}</h3>
                     <b-alert v-if="!subscribed" show variant="warning" class="cb">
                         Prihlasovanie bude čoskoro spustené,<br/>
                         zadajte svoj email a dostanete notifikáciu, keď sa bude dať prihlásiť.
                     </b-alert>
                     <b-alert v-if="subscribed" show variant="success" class="cb">
-                        Výborne notifikáciu pošleme na email <strong>{{subscribed}}</strong>
+                        Výborne, notifikáciu pošleme na email <strong>{{subscribed}}</strong>
                     </b-alert>
                     <b-input-group>
                         <b-input-group-prepend is-text>
