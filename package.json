@@ -81,6 +81,8 @@
         "error",
         "always"
       ],
+      "camelcase": "off",
+      "@typescript-eslint/camelcase": "off",
       "@typescript-eslint/member-delimiter-style": [
         "error",
         {
